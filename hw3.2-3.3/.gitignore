@@ -1,0 +1,6 @@
+.*
+/target
+/bin
+/logs
+# Except this file
+!.gitignore
