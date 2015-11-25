@@ -30,6 +30,8 @@ db.messages.aggregate([
 {$match:{"headers.From":"andrew.fastow@enron.com", "headers.To":{$in:["jeff.skilling@enron.com"]}}},
 {$group:{"_id":"$headers.From", "count":{$sum:1}}}
 ]).pretty()
+
+
 { "_id" : "andrew.fastow@enron.com", "count" : 3 }
 
 Query for the reference
@@ -39,4 +41,6 @@ db.messages.aggregate([
 {$match:{"headers.From":"andrew.fastow@enron.com", "headers.To":{$in:["john.lavorato@enron.com"]}}},
 {$group:{"_id":"$headers.From", "count":{$sum:1}}}
 ]).pretty()
+
+
 { "_id" : "andrew.fastow@enron.com", "count" : 1 }

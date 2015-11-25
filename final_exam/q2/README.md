@@ -32,6 +32,8 @@ db.messages.aggregate([
 {"$sort" : {"count" : -1}},
 {$limit: 2}
 ]).pretty()
+
+
 {
         "_id" : {
                 "from" : "susan.mara@enron.com",
